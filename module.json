@@ -1,6 +1,6 @@
 {
   "name": "elevationruler",
-  "title": "Elevation Ruler",
+  "title": "Elevation Ruler+",
   "id": "elevationruler",
   "description": "Modify Foundry VTT ruler for use when dragging tokens, pathfinding, and measuring elevation.",
   "version": "#{VERSION}#",

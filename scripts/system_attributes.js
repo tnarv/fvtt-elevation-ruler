@@ -331,6 +331,16 @@ function pf2eTokenSpeed(token, movementType) {
       const burrowSpeed = tokenSpeed.otherSpeeds.find(x => x.type === "burrow");
       if ( typeof burrowSpeed !== "undefined" ) speed = burrowSpeed.total;
       break;
+      }
+    case MOVEMENT_TYPES.SWIM: {
+        const swimSpeed = tokenSpeed.otherSpeeds.find(x => x.type === "swim");
+        if (typeof swimSpeed !== "undefined") speed = swimSpeed.total;
+        break;
+    }
+    case MOVEMENT_TYPES.CLIMB: {
+        const climbSpeed = tokenSpeed.otherSpeeds.find(x => x.type === "climb");
+        if (typeof climbSpeed !== "undefined") speed = climbSpeed.total;
+        break;
     }
   }
   if (speed === null) return null;

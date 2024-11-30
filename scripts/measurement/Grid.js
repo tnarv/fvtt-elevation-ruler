@@ -139,6 +139,8 @@ function _measurePath(wrapped, waypoints, { cost }, result) {
     start = end;
   }
 
+  //debug
+  console.log(result);
 
   return result;
 }

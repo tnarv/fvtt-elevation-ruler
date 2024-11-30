@@ -172,6 +172,25 @@ Hooks.once("init", function() {
     Settings
   };
 
+  if (game.system.id == "dnd5e" ) {
+    CONFIG.elevationruler.MOVEMENT_TYPES.SWIM = 3; 
+    CONFIG.elevationruler.MOVEMENT_BUTTONS[CONFIG.elevationruler.MOVEMENT_TYPES.SWIM] = "person-swimming"; 
+    CONFIG.elevationruler.SPEED.ATTRIBUTES.SWIM = "actor.system.attributes.movement.swim"; 
+
+    CONFIG.elevationruler.MOVEMENT_TYPES.CLIMB = 4; 
+    CONFIG.elevationruler.MOVEMENT_BUTTONS[CONFIG.elevationruler.MOVEMENT_TYPES.CLIMB] = "spider"; 
+    CONFIG.elevationruler.SPEED.ATTRIBUTES.CLIMB = "actor.system.attributes.movement.climb"; 
+  }
+  else if (game.system.id == "pf2e") {
+      CONFIG.elevationruler.MOVEMENT_TYPES.SWIM = 3; 
+      CONFIG.elevationruler.MOVEMENT_BUTTONS[CONFIG.elevationruler.MOVEMENT_TYPES.SWIM] = "person-swimming"; 
+      //CONFIG.elevationruler.SPEED.ATTRIBUTES.SWIM = "swim"; 
+
+      CONFIG.elevationruler.MOVEMENT_TYPES.CLIMB = 4; 
+      CONFIG.elevationruler.MOVEMENT_BUTTONS[CONFIG.elevationruler.MOVEMENT_TYPES.CLIMB] = "spider"; 
+      //CONFIG.elevationruler.SPEED.ATTRIBUTES.CLIMB = "climb"; 
+  }
+
   loadTemplates(Object.values(TEMPLATES)).then(_value => log("Templates loaded."));
 });
 

@@ -6,3 +6,4 @@ sync_module.sh
 *.sh
 
 eslint.config.mjs
+/.vs
